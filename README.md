@@ -7,3 +7,4 @@
 - nextjs web页面框架
 - jotai 状态管理工具
 - tailwind css 样式工具
+- vidstack 作为媒体的播放控制库

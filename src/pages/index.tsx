@@ -1,30 +1,19 @@
-import { useState } from "react";
-import { invoke } from "@tauri-apps/api/tauri";
-
-// 'use client'
-
-import 'aplayer/dist/APlayer.min.css';
 import { useEffect, useRef } from 'react';
-// import APlayer from 'aplayer';
+
+import 'vidstack/styles/base.css';
+
+import { MediaOutlet, MediaPlayer } from '@vidstack/react';
+import { MediaPlayerElement } from 'vidstack';
 
 export default function Home() {
-  const player = useRef()
-  useEffect(() => {
-    import('aplayer').then(({ default: APlayer }) => {
-      console.log(APlayer)
-      const ap = new APlayer({
-        container: player.current,
-        audio: [{
-          name: 'name',
-          artist: 'artist',
-          url: 'https://cn.mugeda.com/c/user/data/56317edca3664edd200001f2/5f4789290fcad950d11bce7e.mp3',
-          cover: 'cover.jpg'
-        }]
-      });
-    });
-  }, [player])
+  const player = useRef<MediaPlayerElement>(null);
+  // player.current
+
   return <main className="flex flex-col justify-between h-screen">
     <section></section>
-    <div ref={player} className="w-full !m-0"></div>
+    <MediaPlayer src="https://media-files.vidstack.io/audio.mp3" controls ref={player}>
+      {/* ^ remove `controls` attribute if you're designing a custom UI */}
+      <MediaOutlet />
+    </MediaPlayer>
   </main>
 }

@@ -22,7 +22,8 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "types": ["vidstack/globals"]
   },
   "include": [
     "next-env.d.ts",
