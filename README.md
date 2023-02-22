@@ -1,7 +1,9 @@
-# Tauri + Next.js + Typescript
+# 汉乐府
 
-This template should help get you started developing with Tauri, Next.js and Typescript.
+项目处于早早早早早早期阶段，慎用…… 
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+### 主要技术栈
+- tauri 跨平台工具链
+- nextjs web页面框架
+- jotai 状态管理工具
+- tailwind css 样式工具
