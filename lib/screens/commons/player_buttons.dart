@@ -27,7 +27,7 @@ class PlayerButtons extends StatelessWidget {
           stream: _audioPlayer.playerStateStream,
           builder: (_, snapshot) {
             final playerState = snapshot.data;
-            return _playPauseButton(playerState!);
+            return _playPauseButton(playerState);
           },
         ),
         StreamBuilder<SequenceState?>(
@@ -46,8 +46,8 @@ class PlayerButtons extends StatelessWidget {
     );
   }
 
-  Widget _playPauseButton(PlayerState playerState) {
-    final processingState = playerState.processingState;
+  Widget _playPauseButton(PlayerState? playerState) {
+    final processingState = playerState?.processingState;
     if (processingState == ProcessingState.loading ||
         processingState == ProcessingState.buffering) {
       return Container(
